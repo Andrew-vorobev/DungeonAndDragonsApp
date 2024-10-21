@@ -1,4 +1,4 @@
-package com.example.dungeonanddragonsapp.presentation.ui.fragment.home
+package com.example.dungeonanddragonsapp.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,17 +23,15 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-            ViewModelProvider(this)[HomeViewModel::class.java]
+            ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
-//        lifecycleScope.launch {
-//            homeViewModel.text.collect{value ->
-//                textView.text = value
-//            }
-//        }
+        homeViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
         return root
     }
 

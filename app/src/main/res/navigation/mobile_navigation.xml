@@ -7,33 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.dungeonanddragonsapp.presentation.ui.fragment.home.HomeFragment"
+        android:name="com.example.dungeonanddragonsapp.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_data_list"
-        android:name="com.example.dungeonanddragonsapp.presentation.ui.fragment.dataList.DataListFragment"
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.dungeonanddragonsapp.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_data_list" >
-        <action
-            android:id="@+id/action_navigation_data_list_to_navigation_data_detail"
-            app:destination="@id/navigation_data_detail" />
-    </fragment>
+        tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.dungeonanddragonsapp.presentation.ui.fragment.notifications.NotificationsFragment"
+        android:name="com.example.dungeonanddragonsapp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-
-    <fragment
-        android:id="@+id/navigation_data_detail"
-        android:name="com.example.dungeonanddragonsapp.presentation.ui.fragment.detail.DataDetailFragment"
-        tools:layout="@layout/fragment_data_detail">
-        <argument
-            android:name="ItemView"
-            app:argType="com.example.dungeonanddragonsapp.presentation.ui.model.item.ItemView" />
-    </fragment>
-
 </navigation>
