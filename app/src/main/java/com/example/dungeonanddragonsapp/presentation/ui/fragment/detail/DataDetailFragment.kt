@@ -27,7 +27,7 @@ class DataDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         savedInstanceState?.let {
-            val position = savedInstanceState.getIntArray("ARTICLE_SCROLL_POSITION")
+            val position = savedInstanceState.getIntArray(ARTICLE_SCROLL_POSITION)
             if (position != null) binding.dataDetailScrollView.post(Runnable {
                 binding.dataDetailScrollView.scrollTo(
                     position[0],
@@ -52,7 +52,7 @@ class DataDetailFragment : Fragment() {
         super.onSaveInstanceState(outState)
 
         outState.putIntArray(
-            "ARTICLE_SCROLL_POSITION",
+            ARTICLE_SCROLL_POSITION,
             intArrayOf(binding.dataDetailScrollView.scrollX, binding.dataDetailScrollView.scrollY)
         )
     }
