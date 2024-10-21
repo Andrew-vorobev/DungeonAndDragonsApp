@@ -17,7 +17,6 @@ import com.example.dungeonanddragonsapp.presentation.ui.util.ItemDiffUtilCallbac
 
 class FilmsRecyclerViewAdapter :
     ListAdapter<ItemView, FilmsRecyclerViewAdapter.FilmsHolder>(ItemDiffUtilCallback()) {
-
     private lateinit var onButtonClickListener: OnButtonClickListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmsHolder {
